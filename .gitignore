@@ -1,3 +1,9 @@
+# For IntelliJ IDEA
+*.iws
+.idea/dataSources.local.xml
+out/
+.idea/workspace.xml
+
 *.class
 
 # Mobile Tools for Java (J2ME)
