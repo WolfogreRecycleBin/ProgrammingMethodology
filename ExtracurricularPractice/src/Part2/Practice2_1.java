@@ -7,8 +7,8 @@ import java.util.Random;
  */
 public class Practice2_1 {
 	public static void main(String args[]){
-		Random random = new Random();
 		System.out.println("13121602-宋建鑫:");
+		Random random = new Random();
 		int x = random.nextInt();
 		int y = random.nextInt();
 		int z;
