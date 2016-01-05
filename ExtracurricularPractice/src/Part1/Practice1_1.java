@@ -5,20 +5,36 @@ package Part1;
  */
 public class Practice1_1 {
 
-	static int [] Qx;
-	static int [] Qy;
-	static int result;
-	static int depth;
+	static int result = 0;
+	static int solution[];
 
 	public static void main(String arg[]){
-		Qx = new int [8];
-		Qy = new int [8];
-		result = 0;
-		depth = 0;
-		//搜索树记不清了，改天写吧
+		System.out.println("13121602-宋建鑫:");
+		solution = new int [8];
+		backtrack(0);
+		System.out.println(result);
 	}
 
-	static boolean isLegal(){
-		return false;
+	static boolean isLegal(int depth){
+		for(int i = 0; i <= depth; ++i)
+			for(int j = i + 1; j <= depth; ++j){
+				if(solution[i] == solution[j])
+					return false;
+				if(Math.abs(i - j) == Math.abs(solution[i] - solution[j]))
+					return false;
+			}
+		return true;
+	}
+
+	static void backtrack(int depth){
+		if(depth == 8){
+			++result;
+			return;
+		}
+		for(int i = 0; i < 8; ++i){
+			solution[depth] = i;
+			if(isLegal(depth))
+				backtrack(depth + 1);
+		}
 	}
 }
