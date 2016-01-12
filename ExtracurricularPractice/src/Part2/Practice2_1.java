@@ -11,13 +11,13 @@ public class Practice2_1 {
 		Random random = new Random();
 		int x = random.nextInt();
 		int y = random.nextInt();
+		System.out.println("随机生成x = " + x);
+		System.out.println("随机生成y = " + y);
 		int z;
-		System.out.println("x = " + x);
-		System.out.println("y = " + y);
 		if(x > y)
 			z = x;
 		else
 			z = y;
-		System.out.println("z = " + z);
+		System.out.println("较大数为z = " + z);
 	}
 }
